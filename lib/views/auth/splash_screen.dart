@@ -26,8 +26,8 @@ class _SplashscreenState extends State<Splashscreen> {
 
   @override
   Widget build(BuildContext context) {
-    final width=MediaQuery.of(context).size.width;
-     final height=MediaQuery.of(context).size.height;
+    // final width=MediaQuery.of(context).size.width;
+    //  final height=MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor:Appcolor.maincolor,
@@ -35,7 +35,7 @@ class _SplashscreenState extends State<Splashscreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/on boarding.png"),
+            
                 Text("ToDo",style:TextStyle(color:Appcolor.fontcolor, fontSize: 45),)
           ]
         ),
