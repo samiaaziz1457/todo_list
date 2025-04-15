@@ -13,13 +13,13 @@ class CommonButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor:Appcolor.maincolor,
+        backgroundColor:Appcolor.buttoncolor,
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.zero
         ),
       ),
-      child: Text( title, style: TextStyle( fontSize: 16, color: Appcolor.fontcolor,
+      child: Text( title, style: TextStyle( fontSize: 25, color: Colors.white,
         ),
       ),
     );

@@ -18,7 +18,7 @@ class CommontextFiled extends StatelessWidget {
         hintStyle: TextStyle(color: Colors.grey[700]),
     filled: true,
     fillColor: Colors.white,
-    contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+     contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(30),
       borderSide: BorderSide.none,

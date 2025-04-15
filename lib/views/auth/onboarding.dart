@@ -1,8 +1,10 @@
-// ignore_for_file: use_super_parameters
+// ignore_for_file: use_super_parameters, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
+import 'package:todo_list/views/auth/sign_up.dart';
+import 'package:todo_list/widgets/common_button.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -14,29 +16,28 @@ class OnboardingScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 200),
+            const SizedBox(height: 160),
             Center(
               child: Image.asset(
                 Appimages.onboardingimage,
-                height: 400,
+                height: 350,
               ),
             ),
-          
             const Text(
               "Get things done with TODo",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 35,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40.0),
+              padding: EdgeInsets.symmetric(horizontal: 49.0),
               child: Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing. Maxime, tempore! Animi nemo aut atque, deleniti nihil dolorem repellendus.",
                 style: TextStyle(
-                  fontSize: 29,
+                  fontSize: 28,
                   color: Appcolor.fontcolor,
                 ),
                 textAlign: TextAlign.center,
@@ -46,23 +47,15 @@ class OnboardingScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 100.0),
               child: SizedBox(
-                width: 242,
+                width: 250,
                 height: 55,
-                child: ElevatedButton(
-                  onPressed: () {
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:Appcolor.buttoncolor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  child: const Text(
-                    "Get Started",
-                    style: TextStyle(fontSize: 26,color: Appcolor.maincolor,),
-                  ),
+                child:
+                CommonButton(title: " Get Started",
+                  onPressed: (){
+                     Navigator.pushReplacement(
+                        context, MaterialPageRoute(builder: (_) => SignUpScreen()), );
+                  })
                 ),
-              ),
             ),
           ],
         ),
