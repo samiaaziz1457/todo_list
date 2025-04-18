@@ -5,6 +5,7 @@ import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
 import 'package:todo_list/views/auth/forget_screen.dart';
 import 'package:todo_list/views/auth/sign_up.dart';
+import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/common_button.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
 
@@ -53,7 +54,10 @@ class SignInScreen extends StatelessWidget {
                   child: SizedBox(
                    width: 300,
                     height: 60,
-                    child: CommonButton(title: "Sign In", onPressed: (){}),)),
+                    child: CommonButton(title: "Sign In", onPressed: (){
+                   Navigator.pushReplacement(
+                          context, MaterialPageRoute(builder: (_) =>ProfileScreen()), );    
+                    }),)),
                     Padding(
                       padding: const EdgeInsets.only(left: 170),
                       child: Row(

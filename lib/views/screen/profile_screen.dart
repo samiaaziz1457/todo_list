@@ -3,6 +3,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:todo_list/constant/appcolor.dart';
+import 'package:todo_list/views/screen/add_list.dart';
 import 'package:todo_list/views/screen/edit_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -122,7 +123,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
          Padding(
            padding: const EdgeInsets.only(left: 500,bottom: 40),
            child: InkWell(
-           onTap: () {},
+           onTap: () {
+           Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => AddListScreen()),
+      );
+           },
                  child: CircleAvatar(
                   radius: 40,
                   backgroundColor: Appcolor.buttoncolor,

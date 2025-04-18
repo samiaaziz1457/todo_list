@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/auth/sign_in.dart';
+import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/common_button.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
 
@@ -51,7 +52,7 @@ class SignUpScreen extends StatelessWidget {
                     height: 60,
                     child: CommonButton(title: "Sign UP", onPressed: (){
                        Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) => SignInScreen()), );
+                          context, MaterialPageRoute(builder: (_) =>ProfileScreen()), );
                     }),
                   ),
                 ),
