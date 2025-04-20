@@ -35,7 +35,7 @@ class EditAddlistScreen extends StatelessWidget {
                  
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: height*0.02),
               Text(
                 "Tittle of your Task", 
                 style: TextStyle(
@@ -43,13 +43,13 @@ class EditAddlistScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: height*0.01),
               Container(
-                width: 550,
+                width: width * 0.9,
                 height: 2,
                 color: Appcolor.buttoncolor,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: height*0.02),
               Text(
                 "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncove",
                 style: TextStyle(
@@ -59,7 +59,8 @@ class EditAddlistScreen extends StatelessWidget {
               ),
          Padding(
            padding: const EdgeInsets.only(left: 150,top: 520),
-           child: SizedBox(height:60,width: 300,
+           child: SizedBox(width: width * 0.5,  
+              height: height * 0.05,
            child:  CommonButton(title: 'Update', onPressed: (){})),
          ),
             ],

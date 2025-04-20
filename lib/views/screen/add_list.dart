@@ -43,21 +43,21 @@ class AddListScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: height*0.04),
               Text(
                 "Tittle of your Task", 
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: height*0.02),
               Container(
                 width: 550,
                 height: 2,
                 color: Appcolor.buttoncolor,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: height*0.02),
               Text(
                 "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncove",
                 style: TextStyle(

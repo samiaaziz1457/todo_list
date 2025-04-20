@@ -19,7 +19,7 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
         body: Padding(
-          padding: const EdgeInsets.only(top: 20),
+          padding: EdgeInsets.only(top: height * 0.01),
           child: Column(children: [
                 Align(
                   alignment: Alignment.topLeft,
@@ -31,19 +31,19 @@ class SignInScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                 SizedBox(height: 140),
+                 SizedBox(height: height * 0.1,),
                 Text(
                   "Welcome Back!",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                   Image.asset(
                   Appimages.signinimage,
-                  height: 300,
+                  height: height * 0.3, 
                 ),
                 CommontextFiled(labeltext: 'Enter your email address'),
-                SizedBox(height: 40,),
+                SizedBox(height: height * 0.03,),
                 CommontextFiled(labeltext: 'Confrim Password'),
-                SizedBox(height: 50,),
+                SizedBox(height: height*0.02,),
                 TextButton(onPressed: (){
                    Navigator.pushReplacement(
                           context, MaterialPageRoute(builder: (_) =>ForgetScreen()), );
@@ -54,14 +54,14 @@ class SignInScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 25,),
                   child: SizedBox(
-                   width: 300,
-                    height: 60,
+                   width: width * 0.5,  
+              height: height * 0.05,
                     child: CommonButton(title: "Sign In", onPressed: (){
                    Navigator.pushReplacement(
                           context, MaterialPageRoute(builder: (_) =>ProfileScreen()), );    
                     }),)),
                     Padding(
-                      padding: const EdgeInsets.only(left: 170),
+                      padding: EdgeInsets.only(left: width * 0.3 ),
                       child: Row(
                         children: [
                           Text(" Don't have an account", style: TextStyle(color: Appcolor.fontcolor,fontSize: 17),),

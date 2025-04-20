@@ -1,9 +1,12 @@
-// ignore_for_file: prefer_const_constructors, unused_local_variable
+// ignore_for_file: prefer_const_constructors, unused_local_variable, unnecessary_import
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
 import 'package:todo_list/views/auth/sign_in.dart';
+import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/common_button.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
 
@@ -17,7 +20,7 @@ class ForgetScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
       body: Padding(
-        padding: const EdgeInsets.only(top: 30),
+        padding: EdgeInsets.only(top:height * 0.04),
         child: Column(
           children: [
              Align(
@@ -37,15 +40,16 @@ class ForgetScreen extends StatelessWidget {
                 ),
                  Image.asset(
                   Appimages.addnewlistimage,
-                  height: 250,
+                 height:height * 0.3,
                 ),
                 CommontextFiled(labeltext: 'Forget Password'),
                  Padding(
                   padding: const EdgeInsets.only(top: 120),
                   child: SizedBox(
-                   width: 300,
-                    height: 60,
+                    width: width * 0.5,  
+              height: height * 0.05,
                     child: CommonButton(title: "Sign UP", onPressed: (){
+                       Get.to(ProfileScreen());
                     }),
                   ),
                 ),

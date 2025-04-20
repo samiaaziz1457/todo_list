@@ -17,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
       body: Padding(
-        padding: const EdgeInsets.only(top: 20),
+        padding: EdgeInsets.only(top: height * 0.01),
         child: Column(children: [
                 Align(
                   alignment: Alignment.topLeft,
@@ -29,29 +29,29 @@ class SignUpScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                SizedBox(height: 150),
+                SizedBox(height: height * 0.1,),
                 Text(
                   "Welcome Onboard!",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 25),
+                SizedBox(height: height*0.02),
                 Text(
                   "Let's help you meet up your task",
                   style: TextStyle(fontSize: 20, color:Appcolor.buttoncolor),
                 ),
-                SizedBox(height: 100),
+                SizedBox(height: height * 0.09),
                 CommontextFiled(labeltext: 'Enter your Full Name'),
-                SizedBox(height: 40),
+                SizedBox(height: height * 0.03),
                 CommontextFiled(labeltext: 'Enter your Email address'),
-                SizedBox(height: 40),
+                SizedBox(height:  height * 0.03),
                 CommontextFiled(labeltext: 'Create a Password'),
-                SizedBox(height: 40),
+                SizedBox(height:  height * 0.03),
                CommontextFiled(labeltext: 'Comfrim Your Password'),
                 Padding(
-                  padding: const EdgeInsets.only(top: 120),
+                  padding:  EdgeInsets.only(top:  height * 0.15),
                   child: SizedBox(
-                   width: 300,
-                    height: 60,
+                   width: width * 0.5,  
+              height: height * 0.05,
                     child: CommonButton(title: "Sign UP", onPressed: (){
                        Navigator.pushReplacement(
                           context, MaterialPageRoute(builder: (_) =>ProfileScreen()), );
@@ -59,7 +59,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top:10),
+                  padding: EdgeInsets.only(top:height*0.02),
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

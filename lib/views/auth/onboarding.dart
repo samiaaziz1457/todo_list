@@ -18,11 +18,11 @@ class OnboardingScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 160),
+            SizedBox(height: height * 0.1),
             Center(
               child: Image.asset(
                 Appimages.onboardingimage,
-                height: 350,
+                height:height * 0.4,
               ),
             ),
             const Text(
@@ -33,10 +33,10 @@ class OnboardingScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 30),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 49.0),
-              child: Text(
+            SizedBox(height: height * 0.03),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+              child: const Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing. Maxime, tempore! Animi nemo aut atque, deleniti nihil dolorem repellendus.",
                 style: TextStyle(
                   fontSize: 28,
@@ -45,12 +45,12 @@ class OnboardingScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const Spacer(),
+             Spacer(),
             Padding(
-              padding: const EdgeInsets.only(bottom: 100.0),
+              padding:  EdgeInsets.only(bottom:  height * 0.1),
               child: SizedBox(
-                width: 250,
-                height: 55,
+               width: width * 0.5,  
+              height: height * 0.05,
                 child:
                 CommonButton(title: " Get Started",
                   onPressed: (){

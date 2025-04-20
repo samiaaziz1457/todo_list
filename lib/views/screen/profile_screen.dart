@@ -63,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 250,
+            height: height*0.23,
             width: double.infinity,
             color: Appcolor.buttoncolor,
 
@@ -89,11 +89,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
           ),
            ),
-                  SizedBox(height: 20),
+                  SizedBox(height: height*0.02),
                   Text(
                     'Welcome Fisayomi',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 22,
                       color: Appcolor.fontcolor,
                       fontWeight: FontWeight.bold,
                     ),
@@ -103,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 40),
+            padding:  EdgeInsets.only(left:height*0.02, top: height*0.02),
             child: Text(
               "Todo  Tasks.",
               style: TextStyle(
@@ -113,10 +113,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: height*0.02),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: height*0.02),
               itemCount: tasks.length,
               itemBuilder: (context, index) {
                 return taskCard(tasks[index], randomizedColors[index]);
@@ -124,7 +124,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
          Padding(
-           padding: const EdgeInsets.only(left: 500,bottom: 40),
+           padding:  EdgeInsets.only(left: height*0.46,bottom: height*0.04),
            child: InkWell(
            onTap: () {
            Navigator.pushReplacement(

@@ -18,43 +18,43 @@ class EditProfileScreen extends StatelessWidget {
         children: [
           
         Container(
-            height: 250,
+            height: height*0.23,
             width: double.infinity,
             color: Appcolor.buttoncolor,
             child: Center(
               child: Column(
                 children: [ 
                    Padding(
-                     padding: const EdgeInsets.only(top: 30),
+                     padding:  EdgeInsets.only(top: height*0.03),
                      child: Row(children: [
                          IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
-        onPressed: () {
-          Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
-        },
-      ),
+                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                           onPressed: () {
+                       Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+                       },
+                       ),
                         Spacer(),
                       Text("Save",style: TextStyle(color: Colors.white,fontSize: 20),),
                      ],),
                    ),
                Material(
-  color: const Color.fromARGB(0, 255, 255, 255),
-  child: InkWell(
-    onTap: () {},
-    borderRadius: BorderRadius.circular(50),
-    child: CircleAvatar(
-      radius: 50,
-      backgroundImage: AssetImage('assets/images/profile iamges.png'),
-      backgroundColor: Colors.white,
-      child: Icon(Icons.add,color: Colors.black,size: 80,),
-      )
-       ,),
-         ),
-          ],),
-           )
-            ),
+                         color: const Color.fromARGB(0, 255, 255, 255),
+                   child: InkWell(
+                onTap: () {},
+             borderRadius: BorderRadius.circular(50),
+                  child: CircleAvatar(
+                radius: 50,
+             backgroundImage: AssetImage('assets/images/profile iamges.png'),
+              backgroundColor: Colors.white,
+                 child: Icon(Icons.add,color: Colors.black,size: 80,),
+                 )
+               ,),
+                ),
+               ],),
+             )
+             ),
           Padding(
-            padding: const EdgeInsets.only(right:450,top: 15),
+            padding: EdgeInsets.only(right:height*0.4,top: height*0.02),
             child: Text('Edit Profile',style: TextStyle(color: Appcolor.buttoncolor,fontSize: 25),),
           ),
           SizedBox(height: 20,),
@@ -62,15 +62,15 @@ class EditProfileScreen extends StatelessWidget {
           SizedBox(height: 20,),
           CommontextFiled(labeltext: 'abc@gmail.com',),
         Padding(
-  padding: const EdgeInsets.only(right: 500, top: 15),
+  padding:  EdgeInsets.only(right: height*0.45, top: height*0.02),
   child: Row(
     mainAxisSize: MainAxisSize.min,
     children: [
       Text(
         'More',style: TextStyle(  color: Appcolor.buttoncolor, fontSize: 18, ), ),],), ),
-   SizedBox(height: 20),
+   SizedBox(height: height*0.02),
    Padding(
-     padding: const EdgeInsets.only(left: 10,),
+     padding:  EdgeInsets.only(left: height*0.02,),
      child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
