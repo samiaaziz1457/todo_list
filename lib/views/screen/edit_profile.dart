@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:todo_list/constant/appcolor.dart';
+import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
 
 class EditProfileScreen extends StatelessWidget {
@@ -9,6 +10,8 @@ class EditProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
       body: Column(
@@ -20,14 +23,20 @@ class EditProfileScreen extends StatelessWidget {
             color: Appcolor.buttoncolor,
             child: Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: [ 
                    Padding(
-         padding: const EdgeInsets.only(left: 530,bottom: 40),
-         child: Row(children: [
-          Text("Save",style: TextStyle(color: Colors.white,fontSize: 20),)
-         ],),
-       ),
+                     padding: const EdgeInsets.only(top: 30),
+                     child: Row(children: [
+                         IconButton(
+        icon: Icon(Icons.arrow_back, color: Colors.white),
+        onPressed: () {
+          Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+        },
+      ),
+                        Spacer(),
+                      Text("Save",style: TextStyle(color: Colors.white,fontSize: 20),),
+                     ],),
+                   ),
                Material(
   color: const Color.fromARGB(0, 255, 255, 255),
   child: InkWell(

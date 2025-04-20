@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:todo_list/constant/appcolor.dart';
@@ -14,6 +14,8 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
         body: Padding(

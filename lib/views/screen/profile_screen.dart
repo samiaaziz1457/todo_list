@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print, unused_local_variable
 
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -53,9 +53,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       (_) => cardColors[random.nextInt(cardColors.length)],
     );
   }
-
   @override
   Widget build(BuildContext context) {
+     final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Appcolor.maincolor,
       body: Column(
@@ -65,27 +66,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
             height: 250,
             width: double.infinity,
             color: Appcolor.buttoncolor,
+
             child: Center(
+             
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                Material(
-  color: Colors.transparent,
-  child: InkWell(
-    onTap: () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => EditProfileScreen()),
-      );
-    },
-    borderRadius: BorderRadius.circular(50),
-    child: CircleAvatar(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {
+          Navigator.pushReplacement(
+           context,
+           MaterialPageRoute(builder: (_) => EditProfileScreen()),
+          );
+         },
+          borderRadius: BorderRadius.circular(50),
+           child: CircleAvatar(
       radius: 50,
       backgroundImage: AssetImage('assets/images/profile iamges.png'),
       backgroundColor: Colors.white,
       ),
-     ),
-      ),
+          ),
+           ),
                   SizedBox(height: 20),
                   Text(
                     'Welcome Fisayomi',

@@ -9,6 +9,8 @@ class commoncontainer extends StatelessWidget {
   final Color  color;
   @override
   Widget build(BuildContext context) {
+     final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;
     return Container(
       height: height,
       width: width,

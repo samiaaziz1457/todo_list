@@ -12,7 +12,6 @@ class Splashscreen extends StatefulWidget {
   @override
   State<Splashscreen> createState() => _SplashscreenState();
 }
-
 class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
@@ -23,11 +22,10 @@ class _SplashscreenState extends State<Splashscreen> {
       );
     });
   }
-
   @override
   Widget build(BuildContext context) {
-    // final width=MediaQuery.of(context).size.width;
-    //  final height=MediaQuery.of(context).size.height;
+     final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor:Appcolor.maincolor,

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'package:flutter/material.dart';
 
@@ -9,11 +9,13 @@ class CommontextFiled extends StatelessWidget {
   final IconData ? prefixicons;
   @override
   Widget build(BuildContext context) {
-
+      final width=MediaQuery.of(context).size.width;
+      final height=MediaQuery.of(context).size.height;  
     return
      Padding(
        padding: const EdgeInsets.symmetric(horizontal: 20),
        child: TextField(
+
         decoration: InputDecoration(
           hintText: hinttext,
           labelText: labeltext,
@@ -21,9 +23,12 @@ class CommontextFiled extends StatelessWidget {
           hintStyle: TextStyle(color: Colors.grey[700]),
            filled: true,
            fillColor: Colors.white,
-       contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+       contentPadding: EdgeInsets.symmetric(
+         horizontal: MediaQuery.of(context).size.width * 0.002, 
+         vertical: MediaQuery.of(context).size.height * 0.004, 
+       ),
            border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide.none,
            ),
          ),
