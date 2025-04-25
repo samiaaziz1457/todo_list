@@ -35,6 +35,7 @@ class EditProfileScreen extends StatelessWidget {
                        ),
                         Spacer(),
                       Text("Save",style: TextStyle(color: Colors.white,fontSize: 20),),
+                    
                      ],),
                    ),
                Material(
