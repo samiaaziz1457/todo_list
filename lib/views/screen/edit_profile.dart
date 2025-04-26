@@ -16,7 +16,6 @@ class EditProfileScreen extends StatelessWidget {
       backgroundColor: Appcolor.maincolor,
       body: Column(
         children: [
-          
         Container(
             height: height*0.23,
             width: double.infinity,
@@ -35,7 +34,6 @@ class EditProfileScreen extends StatelessWidget {
                        ),
                         Spacer(),
                       Text("Save",style: TextStyle(color: Colors.white,fontSize: 20),),
-                    
                      ],),
                    ),
                Material(
@@ -91,8 +89,7 @@ class EditProfileScreen extends StatelessWidget {
           "Logout", style: TextStyle(color: Colors.red,fontSize: 20),),
         onTap: () {},
       ),
-       ],
-     ),
+       ], ),
    ),
  ]), );
   }

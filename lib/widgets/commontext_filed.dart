@@ -3,10 +3,12 @@
 import 'package:flutter/material.dart';
 
 class CommontextFiled extends StatelessWidget {
-  const CommontextFiled({super.key,  this.hinttext, required this.labeltext, this.prefixicons});
+  const CommontextFiled({super.key,  this.hinttext, required this.labeltext, this.prefixicons, this.controller, this.validator});
   final String ? hinttext;
   final String labeltext;
+  final String? Function (String?)? validator;
   final IconData ? prefixicons;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
       final width=MediaQuery.of(context).size.width;
@@ -14,8 +16,9 @@ class CommontextFiled extends StatelessWidget {
     return
      Padding(
        padding: const EdgeInsets.symmetric(horizontal: 20),
-       child: TextField(
-
+       child: TextFormField(
+        controller: controller,
+        validator: validator,
         decoration: InputDecoration(
           hintText: hinttext,
           labelText: labeltext,

@@ -32,7 +32,6 @@ class EditAddlistScreen extends StatelessWidget {
                     },
                     icon: Icon(Icons.arrow_back),
                   ),
-                 
                 ],
               ),
               SizedBox(height: height*0.02),
