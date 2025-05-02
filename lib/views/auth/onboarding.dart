@@ -1,6 +1,7 @@
 // ignore_for_file: use_super_parameters, prefer_const_constructors, unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
 import 'package:todo_list/views/auth/sign_up.dart';
@@ -54,8 +55,7 @@ class OnboardingScreen extends StatelessWidget {
                 child:
                 CommonButton(title: " Get Started",
                   onPressed: (){
-                     Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (_) => SignUpScreen()), );
+                    Get.off(() => SignUpScreen());
                   })
                 ),
             ),

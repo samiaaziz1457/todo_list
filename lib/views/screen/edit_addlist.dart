@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/screen/add_list.dart';
 import 'package:todo_list/widgets/common_button.dart';
@@ -25,10 +26,7 @@ class EditAddlistScreen extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {
-                    Navigator.pushReplacement(
-                     context,
-                   MaterialPageRoute(builder: (_) => AddListScreen()),
-                   );
+                     Get.off(() =>AddListScreen());
                     },
                     icon: Icon(Icons.arrow_back),
                   ),
@@ -63,12 +61,9 @@ class EditAddlistScreen extends StatelessWidget {
            child:  CommonButton(title: 'Update', onPressed: (){})),
          ),
             ],
-          ),
-          
+          ), 
         ),
-        
       ),
-    
     );
   }
 }

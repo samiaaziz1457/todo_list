@@ -3,6 +3,8 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/auth/onboarding.dart';
 
@@ -17,9 +19,7 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) =>OnboardingScreen()), // Make sure LoginScreen is defined
-      );
+     Get.off(OnboardingScreen());
     });
   }
   @override

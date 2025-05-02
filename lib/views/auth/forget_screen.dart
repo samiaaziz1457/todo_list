@@ -6,6 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
 import 'package:todo_list/views/auth/sign_in.dart';
+
 import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/common_button.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
@@ -28,8 +29,7 @@ class ForgetScreen extends StatelessWidget {
                   child: IconButton(
                     icon: Icon(Icons.arrow_back),
                     onPressed: () {
-                         Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) => SignInScreen()), );
+                        Get.off(() => SignInScreen());
                     },
                   ),
                 ),

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/screen/profile_screen.dart';
 import 'package:todo_list/widgets/commontext_filed.dart';
@@ -29,7 +30,7 @@ class EditProfileScreen extends StatelessWidget {
                          IconButton(
                         icon: Icon(Icons.arrow_back, color: Colors.white),
                            onPressed: () {
-                       Navigator.push(context,MaterialPageRoute(builder: (_) => ProfileScreen()),);
+                        Get.off(() => ProfileScreen());
                        },
                        ),
                         Spacer(),

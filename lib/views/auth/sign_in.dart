@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/constant/appimages.dart';
 import 'package:todo_list/views/auth/forget_screen.dart';
@@ -45,8 +46,7 @@ class SignInScreen extends StatelessWidget {
                 CommontextFiled(labeltext: 'Confrim Password'),
                 SizedBox(height: height*0.02,),
                 TextButton(onPressed: (){
-                   Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) =>ForgetScreen()), );
+                   Get.off(() => ForgetScreen());
                 }, child:Text('Forget Password?',style: TextStyle(color: Appcolor.buttoncolor,fontSize: 20),) ),
                 SizedBox(
                 height: 100,
@@ -57,8 +57,7 @@ class SignInScreen extends StatelessWidget {
                    width: width * 0.5,  
               height: height * 0.05,
                     child: CommonButton(title: "Sign In", onPressed: (){
-                   Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) =>ProfileScreen()), );    
+                  Get.off(() => ProfileScreen());
                     }),)),
                     Padding(
                       padding: EdgeInsets.only(left: width * 0.3 ),
@@ -66,8 +65,7 @@ class SignInScreen extends StatelessWidget {
                         children: [
                           Text(" Don't have an account", style: TextStyle(color: Appcolor.fontcolor,fontSize: 17),),
                           TextButton(onPressed: (){
-                              Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (_) => SignUpScreen()), );
+                             Get.off(() => SignUpScreen());
                           }, child: Text("Sign UP",style: TextStyle(color: Appcolor.buttoncolor,fontSize: 19),))
                         ],
                       ),

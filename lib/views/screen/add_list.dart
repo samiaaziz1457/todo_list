@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/screen/edit_addlist.dart';
 import 'package:todo_list/views/screen/profile_screen.dart';
@@ -34,10 +35,7 @@ class AddListScreen extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () { 
-                    Navigator.pushReplacement(
-                   context,
-                   MaterialPageRoute(builder: (_) => EditAddlistScreen()),
-                  );
+                     Get.off(() => EditAddlistScreen());
                     },
                     icon: Icon(Icons.edit),
                   ),
