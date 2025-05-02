@@ -8,7 +8,7 @@ import 'package:todo_list/views/screen/edit_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-
+ 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
@@ -30,6 +30,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
       'description': 'Description of your task is ...',
       'time': '8:15 am',
     },
+     {
+      'title': 'Title of your task',
+      'description': 'Description of your task is ...',
+      'time': '8:15 am',
+    },
+    
   ];
   final List<Color> cardColors = [
     Color(0xffC9A9A9),
@@ -66,8 +72,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             height: height*0.23,
             width: double.infinity,
             color: Appcolor.buttoncolor,
-
-            child: Center(
+          
+            child:Center(
              
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -156,10 +162,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
-        children: [
+        children: [                        
          CircleAvatar(
              radius: 15,
-              backgroundColor: const Color.fromARGB(255, 207, 47, 36),
+              backgroundColor: const Color.fromARGB(255, 205, 45, 33),
              child: Icon(  Icons.delete, color: Colors.white, size: 18, ),),
           SizedBox(width: 10),
           Expanded(
