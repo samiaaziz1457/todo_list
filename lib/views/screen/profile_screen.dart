@@ -17,6 +17,21 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   final List<Map<String, String>> tasks = [
     {
+      'title': 'Title your task',
+      'description': 'Description of your task is ...',
+      'time': '6:45 pm',
+    },
+     {
+      'title': 'Title of your task',
+      'description': 'Description of your task is ...',
+      'time': '6:45 pm',
+    },
+     {
+      'title': 'Title of your task',
+      'description': 'Description of your task is ...',
+      'time': '6:45 pm',
+    },
+     {
       'title': 'Title of your task',
       'description': 'Description of your task is ...',
       'time': '6:45 pm',
