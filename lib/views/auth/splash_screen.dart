@@ -4,7 +4,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:todo_list/constant/appcolor.dart';
 import 'package:todo_list/views/auth/onboarding.dart';
 

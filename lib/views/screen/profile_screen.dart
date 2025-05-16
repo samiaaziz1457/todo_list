@@ -9,7 +9,6 @@ import 'package:todo_list/views/screen/edit_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
- 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
@@ -62,7 +61,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
      Color.fromARGB(255, 246, 162, 253),
   ];
   late List<Color> randomizedColors;
-
   @override
   void initState() {
     super.initState();
