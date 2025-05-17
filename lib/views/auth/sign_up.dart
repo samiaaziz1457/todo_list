@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_local_variable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_local_variable, non_constant_identifier_names
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         setState(() {
                           isLoading = true;
                         });
-                        await signup();
+                        await SignUp();
                         setState(() {
                           isLoading = false;
                         });
@@ -135,21 +135,43 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  Future signup() async {
-    try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailcontroller.text.trim(),
-        password: passwordcontroller.text.trim(),
-      );
-      Get.offAll(() => SignInScreen());
-    } on FirebaseAuthException catch (e) {
-      Get.snackbar(
-        'Error',
-        e.message ?? 'An error occurred',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.redAccent,
-        colorText: Colors.white,
-      );
-    }
+//   Future signup() async {
+//     try {
+//       await FirebaseAuth.instance.createUserWithEmailAndPassword(
+//         email: emailcontroller.text.trim(),
+//         password: passwordcontroller.text.trim(),
+//       );
+//       Get.offAll(() => SignInScreen());
+//     } on FirebaseAuthException catch (e) {
+//       Get.snackbar(
+//         'Error',
+//         e.message ?? 'An error occurred',
+//         snackPosition: SnackPosition.BOTTOM,
+//         backgroundColor: Colors.redAccent,
+//         colorText: Colors.white,
+//       );
+//     }
+//   }
+// }
+
+
+Future SignUp() async
+{
+  try {
+     await FirebaseAuth.instance.createUserWithEmailAndPassword(email: emailcontroller.text, password: passwordcontroller.text);
+     Get.offAll(()=>SignInScreen());
+  }on FirebaseAuthException catch (e) {
+    Get.snackbar('Errroe', e.message ?? 'An error occured',
+    snackPosition: SnackPosition.BOTTOM,
+    backgroundColor: Colors.redAccent,
+    colorText: Colors.black
+    );
+    
   }
+  finally{
+    setState(() {
+      isLoading =false;
+    });
+  }
+}
 }
